@@ -1,32 +1,12 @@
-package extent;
-import java.io.File;
-import java.io.IOException;
-import java.text.SimpleDateFormat;
-import java.util.Date;
-import java.util.concurrent.TimeUnit;
+package com.orangehrmtest;
 
-import org.apache.commons.io.FileUtils;
+import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.By;
-import org.openqa.selenium.OutputType;
-import org.openqa.selenium.TakesScreenshot;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
-import org.testng.ITestResult;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.AfterSuite;
-import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Test;
 
-import com.aventstack.extentreports.ExtentReports;
-import com.aventstack.extentreports.ExtentTest;
-import com.aventstack.extentreports.Status;
-import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
-import com.aventstack.extentreports.reporter.configuration.Theme;
+import com.oranhrmbase.BaseClass;
 
-import ExtentBase.BaseClass;
-import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class ExtentReportDemo extends BaseClass {
 	
@@ -44,7 +24,7 @@ public class ExtentReportDemo extends BaseClass {
 	test=extent.createTest("orangeHRMLogoTest");
 	
 	boolean status=driver.findElement(By.xpath("//img[@alt='company-branding']")).isDisplayed();
-	Assert.assertTrue(false);
+	Assert.assertTrue(status);
 		
 		
 	}

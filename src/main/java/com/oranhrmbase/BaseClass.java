@@ -1,4 +1,4 @@
-package ExtentBase;
+package com.oranhrmbase;
 
 import java.io.File;
 import java.io.IOException;
