@@ -2,39 +2,42 @@
 <testng-results skipped="0" failed="1" ignored="0" total="3" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="34868" started-at="2023-02-15T10:21:00 IST" finished-at="2023-02-15T10:21:35 IST">
+  <suite name="Suite" duration-ms="39061" started-at="2023-02-17T19:08:11 IST" finished-at="2023-02-17T19:08:50 IST">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="34868" started-at="2023-02-15T10:21:00 IST" finished-at="2023-02-15T10:21:35 IST">
-      <class name="extent.ExtentReportDemo">
-        <test-method status="PASS" signature="setExtent()[pri:0, instance:extent.ExtentReportDemo@4232c52b]" name="setExtent" is-config="true" duration-ms="151" started-at="2023-02-15T10:21:00 IST" finished-at="2023-02-15T10:21:00 IST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setExtent -->
-        <test-method status="PASS" signature="setup()[pri:0, instance:extent.ExtentReportDemo@4232c52b]" name="setup" is-config="true" duration-ms="12642" started-at="2023-02-15T10:21:00 IST" finished-at="2023-02-15T10:21:12 IST">
+    <test name="AllTest" duration-ms="39061" started-at="2023-02-17T19:08:11 IST" finished-at="2023-02-17T19:08:50 IST">
+      <class name="com.orangehrm.testcases.DashboardPageTest">
+        <test-method status="PASS" signature="setup()[pri:0, instance:com.orangehrm.testcases.DashboardPageTest@1877ab81]" name="setup" is-config="true" duration-ms="10867" started-at="2023-02-17T19:08:35 IST" finished-at="2023-02-17T19:08:46 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method status="PASS" signature="orangeHRMLoginTest()[pri:0, instance:extent.ExtentReportDemo@4232c52b]" name="orangeHRMLoginTest" duration-ms="2165" started-at="2023-02-15T10:21:12 IST" finished-at="2023-02-15T10:21:15 IST">
+        <test-method status="PASS" signature="validatePersonalDetails()[pri:0, instance:com.orangehrm.testcases.DashboardPageTest@1877ab81]" name="validatePersonalDetails" duration-ms="3468" started-at="2023-02-17T19:08:46 IST" finished-at="2023-02-17T19:08:49 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validatePersonalDetails -->
+        <test-method status="PASS" signature="teardown()[pri:0, instance:com.orangehrm.testcases.DashboardPageTest@1877ab81]" name="teardown" is-config="true" duration-ms="721" started-at="2023-02-17T19:08:49 IST" finished-at="2023-02-17T19:08:50 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+      </class> <!-- com.orangehrm.testcases.DashboardPageTest -->
+      <class name="com.orangehrm.testcases.LoginPageTest">
+        <test-method status="PASS" signature="setup()[pri:0, instance:com.orangehrm.testcases.LoginPageTest@4232c52b]" name="setup" is-config="true" duration-ms="10706" started-at="2023-02-17T19:08:11 IST" finished-at="2023-02-17T19:08:22 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="orangeHRMLoginTest()[pri:0, instance:com.orangehrm.testcases.LoginPageTest@4232c52b]" name="orangeHRMLoginTest" duration-ms="1972" started-at="2023-02-17T19:08:22 IST" finished-at="2023-02-17T19:08:24 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- orangeHRMLoginTest -->
-        <test-method status="PASS" signature="result(org.testng.ITestResult)[pri:0, instance:extent.ExtentReportDemo@4232c52b]" name="result" is-config="true" duration-ms="716" started-at="2023-02-15T10:21:15 IST" finished-at="2023-02-15T10:21:15 IST">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=orangeHRMLoginTest status=SUCCESS method=ExtentReportDemo.orangeHRMLoginTest()[pri:0, instance:extent.ExtentReportDemo@4232c52b] output={null}]]]>
-              </value>
-            </param>
-          </params>
+        <test-method status="PASS" signature="teardown()[pri:0, instance:com.orangehrm.testcases.LoginPageTest@4232c52b]" name="teardown" is-config="true" duration-ms="704" started-at="2023-02-17T19:08:24 IST" finished-at="2023-02-17T19:08:25 IST">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- result -->
-        <test-method status="PASS" signature="setup()[pri:0, instance:extent.ExtentReportDemo@4232c52b]" name="setup" is-config="true" duration-ms="8889" started-at="2023-02-15T10:21:15 IST" finished-at="2023-02-15T10:21:24 IST">
+        </test-method> <!-- teardown -->
+        <test-method status="PASS" signature="setup()[pri:0, instance:com.orangehrm.testcases.LoginPageTest@4232c52b]" name="setup" is-config="true" duration-ms="9690" started-at="2023-02-17T19:08:25 IST" finished-at="2023-02-17T19:08:34 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method status="FAIL" signature="orangeHRMLogoTest()[pri:0, instance:extent.ExtentReportDemo@4232c52b]" name="orangeHRMLogoTest" duration-ms="60" started-at="2023-02-15T10:21:24 IST" finished-at="2023-02-15T10:21:24 IST">
+        <test-method status="FAIL" signature="orangeHRMLogoTest()[pri:0, instance:com.orangehrm.testcases.LoginPageTest@4232c52b]" name="orangeHRMLogoTest" duration-ms="58" started-at="2023-02-17T19:08:34 IST" finished-at="2023-02-17T19:08:34 IST">
           <exception class="java.lang.AssertionError">
             <message>
               <![CDATA[expected [true] but found [false]]]>
@@ -45,7 +48,7 @@ at org.testng.Assert.fail(Assert.java:97)
 at org.testng.Assert.failNotEquals(Assert.java:969)
 at org.testng.Assert.assertTrue(Assert.java:43)
 at org.testng.Assert.assertTrue(Assert.java:53)
-at extent.ExtentReportDemo.orangeHRMLogoTest(ExtentReportDemo.java:26)
+at com.orangehrm.testcases.LoginPageTest.orangeHRMLogoTest(LoginPageTest.java:21)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -80,41 +83,11 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- orangeHRMLogoTest -->
-        <test-method status="PASS" signature="result(org.testng.ITestResult)[pri:0, instance:extent.ExtentReportDemo@4232c52b]" name="result" is-config="true" duration-ms="888" started-at="2023-02-15T10:21:24 IST" finished-at="2023-02-15T10:21:25 IST">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=orangeHRMLogoTest status=FAILURE method=ExtentReportDemo.orangeHRMLogoTest()[pri:0, instance:extent.ExtentReportDemo@4232c52b] output={null}]]]>
-              </value>
-            </param>
-          </params>
+        <test-method status="PASS" signature="teardown()[pri:0, instance:com.orangehrm.testcases.LoginPageTest@4232c52b]" name="teardown" is-config="true" duration-ms="710" started-at="2023-02-17T19:08:34 IST" finished-at="2023-02-17T19:08:35 IST">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- result -->
-        <test-method status="PASS" signature="setup()[pri:0, instance:extent.ExtentReportDemo@4232c52b]" name="setup" is-config="true" duration-ms="8766" started-at="2023-02-15T10:21:25 IST" finished-at="2023-02-15T10:21:34 IST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method status="PASS" signature="orangeHRMTitleTest()[pri:0, instance:extent.ExtentReportDemo@4232c52b]" name="orangeHRMTitleTest" duration-ms="7" started-at="2023-02-15T10:21:34 IST" finished-at="2023-02-15T10:21:34 IST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- orangeHRMTitleTest -->
-        <test-method status="PASS" signature="result(org.testng.ITestResult)[pri:0, instance:extent.ExtentReportDemo@4232c52b]" name="result" is-config="true" duration-ms="704" started-at="2023-02-15T10:21:34 IST" finished-at="2023-02-15T10:21:35 IST">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=orangeHRMTitleTest status=SUCCESS method=ExtentReportDemo.orangeHRMTitleTest()[pri:0, instance:extent.ExtentReportDemo@4232c52b] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- result -->
-        <test-method status="PASS" signature="endReport()[pri:0, instance:extent.ExtentReportDemo@4232c52b]" name="endReport" is-config="true" duration-ms="271" started-at="2023-02-15T10:21:35 IST" finished-at="2023-02-15T10:21:35 IST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- endReport -->
-      </class> <!-- extent.ExtentReportDemo -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+        </test-method> <!-- teardown -->
+      </class> <!-- com.orangehrm.testcases.LoginPageTest -->
+    </test> <!-- AllTest -->
+  </suite> <!-- Suite -->
 </testng-results>
