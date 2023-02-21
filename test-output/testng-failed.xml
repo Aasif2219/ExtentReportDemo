@@ -2,15 +2,17 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
   <listeners>
-    <listener class-name="com.orangehrm.utilities.Reporting"/>
+    <listener class-name="com.orangehrm.utilities.ListenerClass"/>
   </listeners>
   <test thread-count="5" name="AllTest(failed)">
     <classes>
       <class name="com.orangehrm.testcases.LoginPageTest">
         <methods>
+          <include name="afterSuite"/>
           <include name="orangeHRMLogoTest"/>
           <include name="teardown"/>
           <include name="setup"/>
+          <include name="loadConfig"/>
         </methods>
       </class> <!-- com.orangehrm.testcases.LoginPageTest -->
     </classes>

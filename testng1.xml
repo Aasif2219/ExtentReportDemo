@@ -3,7 +3,7 @@
 <suite name="Suite">
 
  <listeners>
-    <listener class-name="com.orangehrm.utilities.Reporting"/>
+    <listener class-name="com.orangehrm.utilities.ListenerClass"/>
  </listeners>
 
   <test name="AllTest">

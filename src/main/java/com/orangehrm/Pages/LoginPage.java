@@ -5,6 +5,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import com.oranhrm.base.BaseClass;
+
 public class LoginPage {
 	
 	@FindBy(xpath="//input[@name='username']")
@@ -19,8 +21,8 @@ public class LoginPage {
 	@FindBy(xpath="//img[@alt='company-branding']")
 	WebElement loginLogo;
 	
-	public LoginPage(WebDriver driver){
-		PageFactory.initElements(driver, this);	
+	public LoginPage(){
+		PageFactory.initElements(BaseClass.getDriver(), this);	
 	}
 	
 	public boolean validateLogo() {

@@ -13,31 +13,32 @@ import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.testng.IReporter;
-import org.testng.ITestResult;
-import org.testng.TestListenerAdapter;
+import org.openqa.selenium.remote.RemoteWebDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterSuite;
-import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
-import org.testng.annotations.BeforeTest;
-import org.testng.annotations.Test;
 
-import com.aventstack.extentreports.ExtentReports;
-import com.aventstack.extentreports.ExtentTest;
-import com.aventstack.extentreports.Status;
-import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
-import com.aventstack.extentreports.reporter.configuration.Theme;
 import com.orangehrm.Pages.LoginPage;
-import com.orangehrm.utilities.Reporting;
+import com.orangehrm.utilities.ExtentManager;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class BaseClass {
-	public WebDriver driver;
 	
-	Reporting report;
+
+	public static ThreadLocal<RemoteWebDriver> driver = new ThreadLocal<RemoteWebDriver>();
+	
+	@BeforeSuite
+	public void loadConfig() {
+		ExtentManager.setExtent();
+	}
+	public static WebDriver getDriver() {
+		// Get Driver from threadLocalmap
+		return driver.get();
+	}
+	
+	//Reporting report;
 	
 	public Properties prop;
 	public LoginPage login;
@@ -48,9 +49,11 @@ public class BaseClass {
 	public void setup() throws InterruptedException {
 		readConfig();
 	    WebDriverManager.chromedriver().setup();
-	    driver=new ChromeDriver();
-	    driver.manage().window().maximize();
-	    driver.get(prop.getProperty("url"));
+	    WebDriverManager.chromedriver().setup();
+		// Set Browser to ThreadLocalMap
+		driver.set(new ChromeDriver());
+		getDriver().manage().window().maximize();
+		getDriver().get(prop.getProperty("url"));
 	    Thread.sleep(5000);
 			
 	}
@@ -58,7 +61,7 @@ public class BaseClass {
 	@AfterMethod
 	public void teardown() {
 		
-		driver.quit();
+		getDriver().quit();
 	}
 	
 	public void readConfig() {
@@ -80,12 +83,16 @@ public class BaseClass {
 		TakesScreenshot ts=(TakesScreenshot)driver;
 		File source=ts.getScreenshotAs(OutputType.FILE);
 		
-		String destination=System.getProperty("user.dir")+"/screenshots" +screenshotName+dateName+".png";
+		String destination=System.getProperty("user.dir")+"\\Screenshots\\" +screenshotName+dateName+".png";
 	    File finalDestination=new File(destination);
 	    FileUtils.copyFile(source, finalDestination);
 	    return destination;
 	}
 	
 
-
+	@AfterSuite
+	public void afterSuite() {
+		ExtentManager.endReport();
+	}
+	
 }

@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<extentreports>
+<extentreports xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:noNamespaceSchemaLocation="extent-config1.xsd">
     <configuration>
         <!-- report theme -->
         <!-- standard, dark -->
-        <theme>standard</theme>
+        <theme>dark</theme>
     
         <!-- document encoding -->
         <!-- defaults to UTF-8 -->
@@ -14,12 +15,12 @@
         <protocol>http</protocol>
         
         <!-- title of the document -->
-        <documentTitle>MyStoreProject</documentTitle>
+        <documentTitle>OrangeHRMProject</documentTitle>
         
         <!-- report name - displayed at top-nav -->
-        <reportName>MyStoreProject Report
+        <reportName>OrangeHRM Functional Report
          <![CDATA[
-                <img src='http://localhost:8082/job/MyStoreProject/ws/MyStoreProject/Logo/MyStore.png'/>
+                <img src='C:\Users\Aasif Shaikh\eclipse-workspace\OrangeHRM\Logo\ohrm_logo.png'/>
             ]]>
         </reportName>
         
