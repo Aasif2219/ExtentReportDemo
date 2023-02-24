@@ -13,7 +13,7 @@ public class ExtentManager implements ITestNGListener{
 	
 	public static ExtentHtmlReporter htmlReporter;
 	public static ExtentReports extent;
-	public static ExtentTest logger;
+	public static ExtentTest test;
 	
 
 

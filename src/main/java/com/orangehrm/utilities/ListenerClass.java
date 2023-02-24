@@ -19,26 +19,26 @@ import com.oranhrm.base.BaseClass;
 public class ListenerClass extends ExtentManager implements ITestListener  {
 	
 	public void onTestStart(ITestResult result) {
-		logger = extent.createTest(result.getName());
+		test = extent.createTest(result.getName());
 	}
 
 
 	public void onTestSuccess(ITestResult result) {
 		if (result.getStatus() == ITestResult.SUCCESS) {
-			logger.log(Status.PASS, "Pass Test case is: " + result.getName());
+			test.log(Status.PASS, "Pass Test case is: " + result.getName());
 		}
 	}
 
 	public void onTestFailure(ITestResult result) {
 		if (result.getStatus() == ITestResult.FAILURE) {
 			try {
-				logger.log(Status.FAIL,
+				test.log(Status.FAIL,
 						MarkupHelper.createLabel(result.getName() + " - Test Case Failed", ExtentColor.RED));
-				logger.log(Status.FAIL,
+				test.log(Status.FAIL,
 						MarkupHelper.createLabel(result.getThrowable() + " - Test Case Failed", ExtentColor.RED));
-				String destination = BaseClass.getScreenshot(BaseClass.getDriver(), result.getName());
+				String destination = ActionDrivers.getScreenshot(BaseClass.getDriver(), result.getName());
 			
-				logger.fail("ScreenShot is Attached", MediaEntityBuilder.createScreenCaptureFromPath(destination).build());
+				test.fail("ScreenShot is Attached", MediaEntityBuilder.createScreenCaptureFromPath(destination).build());
 				
 			} catch (IOException e) {
 				// TODO Auto-generated catch block
@@ -49,7 +49,7 @@ public class ListenerClass extends ExtentManager implements ITestListener  {
 
 	public void onTestSkipped(ITestResult result) {
 		if (result.getStatus() == ITestResult.SKIP) {
-			logger.log(Status.SKIP, "Skipped Test case is: " + result.getName());
+			test.log(Status.SKIP, "Skipped Test case is: " + result.getName());
 		}
 	}
 

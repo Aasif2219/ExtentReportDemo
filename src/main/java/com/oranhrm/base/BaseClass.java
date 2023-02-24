@@ -25,7 +25,7 @@ import com.orangehrm.utilities.ExtentManager;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class BaseClass {
-	
+	public Properties prop;
 
 	public static ThreadLocal<RemoteWebDriver> driver = new ThreadLocal<RemoteWebDriver>();
 	
@@ -37,12 +37,6 @@ public class BaseClass {
 		// Get Driver from threadLocalmap
 		return driver.get();
 	}
-	
-	//Reporting report;
-	
-	public Properties prop;
-	public LoginPage login;
-	
 	
 	
 	@BeforeMethod
@@ -77,18 +71,6 @@ public class BaseClass {
 			e.printStackTrace();
 		}
 	}
-	
-	public static String getScreenshot(WebDriver driver,String screenshotName) throws IOException {
-		String dateName=new SimpleDateFormat("yyyyMMddhhmmss").format(new Date());
-		TakesScreenshot ts=(TakesScreenshot)driver;
-		File source=ts.getScreenshotAs(OutputType.FILE);
-		
-		String destination=System.getProperty("user.dir")+"\\Screenshots\\" +screenshotName+dateName+".png";
-	    File finalDestination=new File(destination);
-	    FileUtils.copyFile(source, finalDestination);
-	    return destination;
-	}
-	
 
 	@AfterSuite
 	public void afterSuite() {
